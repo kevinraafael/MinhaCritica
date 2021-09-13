@@ -15,6 +15,7 @@
 #container {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 #mainMenu {
   display: flex;
@@ -25,10 +26,17 @@
   color: #ffff;
   padding: 0 2%;
 }
+.searchBar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+
 #mainMenu > h1 {
   font-family: "Bebas Neue", cursive;
 }
 #navigation > ul {
+  margin-right: 30%;
   padding: 0px;
   margin: 0px;
   list-style: none;
@@ -39,8 +47,9 @@
 #navigation > ul > li > a {
   font-family: "Roboto";
   font-size: 20px;
-  padding: 0 10px 0 0;
+  padding: 0 40px 0 0;
   display: inline-block;
 }
-.searchBar {
+.searchBar input {
+  width: 20vw;
 }
