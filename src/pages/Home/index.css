@@ -32,6 +32,10 @@
   flex-wrap: wrap;
   gap: 5vw;
 }
+.searchBar > input {
+  background-color: #fff;
+  padding-left: 1%;
+}
 
 #mainMenu > h1 {
   font-family: "Bebas Neue", cursive;
@@ -56,9 +60,12 @@
 }
 .containerMovie {
   margin-top: 1%;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
 
   display: flex;
   justify-content: center;
+}
+.moviesList {
+  display: flex;
   flex-direction: row;
 }
