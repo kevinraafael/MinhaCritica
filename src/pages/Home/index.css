@@ -65,7 +65,15 @@
   display: flex;
   justify-content: center;
 }
-.moviesList {
-  display: flex;
-  flex-direction: row;
+#moviesList > ul > li {
+  display: inline;
+}
+#moviesList > ul > li > a {
+  padding-left: 2%;
+  display: inline-block;
+}
+.title01 {
+  padding-left: 2%;
+  font-size: 36;
+  font-family: "Inter", sans-serif;
 }
