@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Crítica</title>
     <link href="index.css" rel="stylesheet">
-    <link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-/>
-
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
 </head>
-<body>
+<body class ="body">
    <div class="header">
        <div id ="mainMenu">
           
@@ -66,7 +61,7 @@
    </div>
    <div >
         <nav id="moviesList"  >
-            <ul>
+            <ul class="slider">
                 <li id ="row">
                     <a>
                         <img height="225" width="150" src ="../../assets/images/suicidesquad.jpg"/> 
@@ -85,7 +80,7 @@
                 </li>
                 <li>
                     <a>
-                        <img height="225" width="150" src ="../../assets/images/clint.jpg"/> 
+                        <img height="225" width="150" src ="../../assets/images/Clint.jpg"/> 
                      </a>
                 </li>
                 <li>
@@ -111,9 +106,123 @@
                 
             </ul>
        </nav>
-       
-
    </div>
-  
-</body>
+   <div class = "containerTitle">
+    <span class="title01">
+        SÉRIES MAIS BEM AVALIADOS
+    </span>
+   </div>
+   <div >
+        <nav id="moviesList"  >
+            <ul class="slider">
+                <li id ="row">
+                    <a>
+                        <img height="225" width="150" src ="../../assets/images/suicidesquad.jpg"/> 
+                    </a>
+                
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" src ="../../assets/images/homemtrevas.jpg"/> 
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" src ="../../assets/images//freeguy.jpg"/> 
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" src ="../../assets/images/Clint.jpg"/> 
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" class="poster" src="../../assets/images/Godzila.jpg"/>
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" class="poster" src="../../assets/images/spaceJam.jpg"/>
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" class="poster" src="../../assets/images/ritmoCoracao.jpg"/>
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" class="poster" src="../../assets/images/thepurge.jpg"/>
+                     </a>
+                </li>
+                
+            </ul>
+       </nav>
+   </div>
+   <div class = "containerTitle">
+    <span class="title01">
+        LIVROS MAIS BEM AVALIADOS
+    </span>
+   </div>
+   <div >
+        <nav id="moviesList" class ="teste" >
+            <ul class="slider">
+                <li id ="row">
+                    <a>
+                        <img height="225" width="150" src ="../../assets/images/suicidesquad.jpg"/> 
+                    </a>
+                
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" src ="../../assets/images/homemtrevas.jpg"/> 
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" src ="../../assets/images//freeguy.jpg"/> 
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" src ="../../assets/images/Clint.jpg"/> 
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" class="poster" src="../../assets/images/Godzila.jpg"/>
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" class="poster" src="../../assets/images/spaceJam.jpg"/>
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" class="poster" src="../../assets/images/ritmoCoracao.jpg"/>
+                     </a>
+                </li>
+                <li>
+                    <a>
+                        <img height="225" width="150" class="poster" src="../../assets/images/thepurge.jpg"/>
+                     </a>
+                </li>
+                
+            </ul>
+       </nav>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+        $('.slider').slick({
+            Infinity:true,
+            slidesToShow:7,
+            slidesToScroll:2,
+            arrows:false,
+        });
+    </script>
+    </body>
 </html>

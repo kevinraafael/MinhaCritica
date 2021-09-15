@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.body {
+  background-color: #000000;
+}
 .header {
   height: 10vh;
   width: 100%;
@@ -35,6 +37,7 @@
 .searchBar > input {
   background-color: #fff;
   padding-left: 1%;
+  width: 20vw;
 }
 
 #mainMenu > h1 {
@@ -55,9 +58,7 @@
   padding: 0 40px 0 0;
   display: inline-block;
 }
-.searchBar input {
-  width: 20vw;
-}
+
 .containerMovie {
   margin-top: 1%;
   margin-bottom: 2%;
@@ -70,17 +71,19 @@
 }
 #moviesList > ul > li > a {
   padding-left: 2%;
-
+  margin-top: 0;
   display: inline-block;
 }
 .containerTitle {
   width: 537;
   height: 22%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 .title01 {
   padding-left: 2%;
   padding-bottom: 45%;
   font-size: 36;
   font-family: "Inter", sans-serif;
+  color: #ffff;
 }
