@@ -1,18 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&family=Roboto&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Antonio&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 .body {
-  background-color: #000000;
+  background-image: url("https://cdn.falauniversidades.com.br/wp-content/uploads/2018/03/fala-universidades-netflix-3.jpg");
 }
 .header {
   height: 10vh;
   width: 100%;
   background-color: #0c0c0c;
-
   display: flex;
 }
 #container {
@@ -60,32 +61,38 @@
   cursor: pointer;
 }
 
-.containerMovie {
-  margin-top: 1%;
-  margin-bottom: 2%;
+.loginContainer {
+  width: 30%;
+  height: 30%;
+
+  position: absolute;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  font-family: Bebas Neue;
+  color: #fff;
+  margin-top: 10%;
+  margin-left: 13%;
 }
-#moviesList > ul > li {
-  display: inline;
-  cursor: pointer;
+.mainTitle {
+  font-family: "Bebas Neue", cursive;
+  font-size: 56px;
+  color: #fff;
 }
-#moviesList > ul > li > a {
-  margin-left: 2%;
-  margin-top: 0;
-  display: inline-block;
-  cursor: pointer;
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  height: 30%;
 }
-.containerTitle {
-  width: 537;
-  height: 22%;
-  margin-bottom: 1%;
-  margin-top: 1%;
+.input > #user {
+  padding-left: 5%;
+  font-size: 20px;
+  font-family: "Antonio", sans-serif;
 }
-.title01 {
-  padding-left: 2%;
-  padding-bottom: 45%;
-  font-size: 36;
-  font-family: "Inter", sans-serif;
-  color: #ffff;
+.input > #password {
+  padding-left: 5%;
+  font-size: 20px;
+  font-family: "Antonio", sans-serif;
 }
