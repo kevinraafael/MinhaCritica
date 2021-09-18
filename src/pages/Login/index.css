@@ -8,8 +8,6 @@
   box-sizing: border-box;
 }
 .body {
-  /*   background-image: url("https://cdn.falauniversidades.com.br/wp-content/uploads/2018/03/fala-universidades-netflix-3.jpg");
- */
   background-color: #fff;
 }
 .header {
@@ -111,17 +109,16 @@
 .containerButton {
   border-width: 15;
   border-style: solid;
-  border-color: red;
   width: 55%;
   height: 50%;
   display: flex;
   background-color: #010101;
   justify-content: center;
+  cursor: pointer;
 }
 #button {
   font-size: 25px;
   color: #fff;
-  cursor: pointer;
 }
 .containerPassword {
   margin-top: 15%;
@@ -129,9 +126,11 @@
   height: 60%;
   display: flex;
   justify-content: center;
-  background-color: aqua;
+  background-color: #fff;
+  cursor: pointer;
 }
 #forgivePassowrd {
   color: #001aff;
   font-size: 18px;
+  margin-bottom: 10%;
 }
