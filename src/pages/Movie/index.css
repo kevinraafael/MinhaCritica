@@ -91,7 +91,12 @@
   color: #fff;
   font-size: 26px;
 }
-
+.MovieDescriptionTitle {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  font-size: 26px;
+}
 #avatar {
   width: 100%;
   height: 100%;
@@ -109,6 +114,7 @@
   font-family: "Montserrat", sans-serif;
 }
 .movieDescription {
+  display: flex;
   height: 100vh;
   width: 50vw;
   flex-direction: column;
@@ -143,4 +149,42 @@
 #shortRoundedText > #trailer {
   color: #f9e006;
   cursor: pointer;
+}
+.containerText {
+  width: 100%;
+  height: 60%;
+
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  margin-left: 5%;
+}
+.AddCritic {
+  width: 30%;
+  height: 5%;
+  display: flex;
+  margin-left: 60%;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #283eb4;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.AddCritic img {
+  margin-bottom: 2%;
+}
+.AddCritic h2 {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  align-items: center;
+  margin-top: 3%;
+  color: #fff;
+}
+.usersCriticContainer {
+  width: 344px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
 }
