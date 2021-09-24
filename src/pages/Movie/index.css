@@ -103,8 +103,8 @@ body {
   display: flex;
 }
 #avatar img {
-  height: 90;
-  width: 90px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -135,7 +135,7 @@ body {
   justify-content: center;
   margin-left: 5%;
   width: 19%;
-  height: 35%;
+  height: 95%;
   background-color: #283eb4;
   border-radius: 10px;
   padding-top: 5px;
@@ -179,10 +179,35 @@ body {
 }
 .usersCriticContainer {
   width: 344px;
-  height: 120px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   background-color: #5d5fef;
   margin-left: 5%;
   border-radius: 7px;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-top: 10%;
+}
+#criticsTitle {
+  color: #ffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  align-self: flex-start;
+  padding-bottom: 10px;
+}
+#critic {
+  color: #fff;
+  text-overflow: ellipsis;
+  font-family: "Roboto";
+}
+h4 {
+  margin: auto 10px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+section {
+  margin-top: 15%;
 }
