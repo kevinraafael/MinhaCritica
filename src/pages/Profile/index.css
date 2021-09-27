@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+}
+.header {
+  height: 10vh;
+  width: 100%;
+  background-color: #0c0c0c;
+
+  display: flex;
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#mainMenu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ffff;
+  padding: 0 2%;
+}
+.searchBar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+.searchBar > input {
+  background-color: #fff;
+  padding-left: 1%;
+  width: 20vw;
+}
+
+#mainMenu > h1 {
+  font-family: "Bebas Neue", cursive;
+}
+#navigation > ul {
+  margin-right: 30%;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+#navigation > ul > li {
+  display: inline;
+}
+#navigation > ul > li > a {
+  font-family: "Roboto";
+  font-size: 20px;
+  padding: 0 40px 0 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  width: 224px;
+  height: 230px;
+  border-radius: 50%;
+}
+.userName {
+  margin-top: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+}
