@@ -1,0 +1,6 @@
+1 -Criar um script do tipo JS
+ e colocar acima da tag de finalização de body.
+
+2 - No arquivo js criar uma classe que extend do HTMLElement
+
+3- lançar um customElements.define('star-rater,nomeDaClasse) - é o que cria a tag dessa classe;
