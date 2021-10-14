@@ -88,6 +88,7 @@ img {
   justify-content: center;
   background-color: #244aad;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .titleText {
   font-size: 24px;
@@ -109,7 +110,7 @@ img {
 
   margin: auto;
   height: auto;
-  background-color: burlywood;
+
   display: flex;
 }
 .usersCritic img {
@@ -127,6 +128,7 @@ img {
   width: 20%;
   height: 25%;
   display: flex;
+  margin: auto;
   justify-content: center;
   background-color: #283eb4;
   border-radius: 10px;
@@ -136,4 +138,15 @@ img {
   color: #fff;
   font-family: "Inter", sans-serif;
   text-align: center;
+}
+.containerText {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  font-family: "Roboto";
+  color: #fff;
+  background-color: #5d5fef;
+  border-radius: 10px;
 }
