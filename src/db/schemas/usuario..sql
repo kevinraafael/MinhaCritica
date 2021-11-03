@@ -1,6 +1,0 @@
-CREATE TABLE IF NOT EXISTS User{
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome VARCHAR NOT NULL,
-    dataNascimento DATE,
-
-}
