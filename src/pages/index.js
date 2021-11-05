@@ -32,10 +32,11 @@ function goTo3homensE1Destiono() {
 function goToThePurge() {
 	window.location.href = "..\\.\\Movie\\thePurge.html"
 }
-/*
+
 function goToSpiderMan() {
 	window.location.href = "..\\.\\Book\\Spider-Man.html"
 }
+/*
 function perfil() {
 	window.location.href = "..\\.\\Profile\\index.html"
 }
@@ -43,8 +44,13 @@ function registration() {
 	window.location.href = "..\\.\\registration\\index.html"
 }
 */
-//TODO pegar o  valor do input e transferir prao outra pagina
+//TODO pegar o  valor do input e transferir prao outra pagina após apertar enter
 function search() {
-	var search = document.getElementById("search").value; 
-	window.location.href = ".\\search\\index.html"
+	if (event.keyCode == 13) {
+		var search = document.getElementById("search").value; 
+		//let element = $("#nome_pesq");
+		//alert(search);
+		//$("#nome_pesq").text('search');
+		window.location.href = "..\\.\\Search\\index.html";	
+	}
 }
