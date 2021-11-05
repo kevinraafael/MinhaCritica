@@ -17,10 +17,25 @@ function goToTheTallMan() {
 function goToFreeGuy() {
 	window.location.href = "..\\.\\Movie\\freeGuy.html"
 }
-function goToKingKong() {
-	window.location.href = "..\\.\\Movie\\kingKong.html"
+function goToKingKongVs() {
+	window.location.href = "..\\.\\Movie\\kingKongVsGodzilla.html"
+}
+function goToSpaceJam() {
+	window.location.href = "..\\.\\Movie\\spaceJam.html"
+}
+function goToTheBox() {
+	window.location.href = "..\\.\\Movie\\theBox.html"
+}
+function goTo3homensE1Destiono() {
+	window.location.href = "..\\.\\Movie\\TheGoodTheBadAndTheUgly.html"
+}
+function goToThePurge() {
+	window.location.href = "..\\.\\Movie\\thePurge.html"
 }
 /*
+function goToSpiderMan() {
+	window.location.href = "..\\.\\Book\\Spider-Man.html"
+}
 function perfil() {
 	window.location.href = "..\\.\\Profile\\index.html"
 }
