@@ -67,10 +67,15 @@ try {
     <div class="cadastro">
       <!--entrada dos dados do usuario -->
       <div class="div_esq">
-        <form method="post" class="form">
-          <input type="text" name="nome" id="nome">
-          <input type="text" placeholder="Nome de Usuário" />
+        <form method="POST" class="form">
+         
+          <input type="text" name="nome" id="nome" placeholder="Nome">
+          
           <input type="text" placeholder="E-mail" />
+          <input type="password" placeholder="Senha" />
+          <input type="password" placeholder="Confirmar Senha" />
+          <button type="submit" class="botao_registro">Confirmar</button>
+
         </form>
       </div>
       <!--entrada dos dados do usuario -->
@@ -78,14 +83,12 @@ try {
       <div class="div_dir">
         <!--entrada dos dados do usuario -->
         <form class="form">
-          <input type="text" placeholder="Data Nascimento" />
-          <input type="password" placeholder="Senha" />
-          <input type="password" placeholder="Confirmar Senha" />
+         
+          
         </form>
       </div>
       <!--entrada dos dados do usuario -->
     </div>
-    <button type="submit" class="botao_registro">Confirmar</button>
     <!-- casdastro-->
   </div>
 
