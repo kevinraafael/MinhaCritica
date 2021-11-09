@@ -44,13 +44,14 @@ function registration() {
 	window.location.href = "..\\.\\registration\\index.html"
 }
 */
-//TODO pegar o  valor do input e transferir prao outra pagina após apertar enter
 function search() {
 	if (event.keyCode == 13) {
-		var search = document.getElementById("search").value; 
-		//let element = $("#nome_pesq");
-		//alert(search);
-		//$("#nome_pesq").text('search');
-		window.location.href = "..\\.\\Search\\index.html";	
+		let search = document.getElementById("search").value; 
+		window.location.href = "..\\.\\Search\\index.html?search="+search;	
 	}
+}
+//TODO ainda posso usar este metodo para receber os valores da API
+function getRequest() {
+	let urlAtual = window.location.href;
+	$('#result_pesq').html('Resultado para <strong>'+urlAtual.substring(urlAtual.indexOf('=')+1)+'</strong>');
 }
