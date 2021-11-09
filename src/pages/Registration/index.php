@@ -11,16 +11,15 @@ try {
     if (key_exists('nome', $_POST) && $_POST['nome'] !== '') {
       $stm = $db->prepare('INSERT INTO Usuarios (nome,email,senha) VALUES (:nome,:email,:senha)');
       // $stm->execute(array(':nome' => $_POST['nome'],),);
-      echo '<pre>';
-      var_dump($_POST);
-
+     
+      
       $stm->execute(
-        array('nome' => $_POST['nome'], 'email' => $_POST['email'], 'senha' => $_POST['senha'])
+        array('nome' => $_POST['nome'], 'email' => $_POST['email'], 'senha' =>hash('sha256', $_POST['senha']))
       );
 
-      echo 'Nome inserido com sucesso! <br/><br/>';
+      
     }
-  }
+  } 
 
   //$usuarios = $db->query('SELECT * FROM Usuarios ORDER BY adicionado_em DESC')->fetchAll();
 } catch (\Throwable $th) {
