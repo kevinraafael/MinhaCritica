@@ -50,8 +50,8 @@ function search() {
 		window.location.href = "..\\.\\Search\\index.html?search="+search;	
 	}
 }
-//TODO ainda posso usar este metodo para receber os valores da API
+//TODO ainda posso usar este metodo para receber os valores da API ou do Banco
 function getRequest() {
 	let urlAtual = window.location.href;
-	$('#result_pesq').html('Resultado para <strong>'+urlAtual.substring(urlAtual.indexOf('=')+1)+'</strong>');
+	$('#result_pesq').html('Resultado para <strong>'+urlAtual.substring(urlAtual.indexOf('=')+1).replace("%20"," ")+'</strong>');
 }
