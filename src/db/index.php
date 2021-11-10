@@ -18,6 +18,7 @@ try {
 } catch (\Throwable $th) {
     echo $th;
     die(1);
+    //salvar imagemo no0 disco e caminho banco
 }
 ?>
 
