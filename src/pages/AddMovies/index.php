@@ -1,3 +1,33 @@
+<?php
+include_once __DIR__ . '/../../db/Database.php';
+
+
+try {
+  Database::createSchema(); // cria o schema do banco de dados
+
+  $db = Database::getInstance();
+
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (key_exists('nome', $_POST) && $_POST['nome'] !== '') {
+      $stm = $db->prepare('INSERT INTO Midia (nome) VALUES (:nome)');
+      // $stm->execute(array(':nome' => $_POST['nome'],),);
+     
+      
+      $stm->execute(
+        array('nome' => $_POST['nome'] )
+      );
+
+      
+    }
+  } 
+
+  //$usuarios = $db->query('SELECT * FROM Usuarios ORDER BY adicionado_em DESC')->fetchAll();
+} catch (\Throwable $th) {
+  echo $th;
+  die(1);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,7 +90,7 @@
          <div class="formCapa">
            <form class="inputCapa">
              <input type="text" placeholder="Categoria">
-             <input type="text"  placeholder="Duração">
+            
              <input type="text" placeholder="URL do Trailer">
            </form>
          </div>
@@ -69,17 +99,19 @@
       <div class="divTituloandSinopse">
         <div class="divTitulo">
           <h1>Título</h1>
-          <form action="">
-             <input  class="inputTitulo"  type="text" placeholder="Insira o titulo da obra">
-          </form>
+          <form method = "POST" action="">
+             <input  name = "nome" class="inputTitulo"  type="text" placeholder="Insira o titulo da obra">
+             <button  type="submit" class="botao">adicionar</button>
+            </form>
         </div>
         <div class="divSinopse">
           <h1>Sinopse</h1>
           <form action="">  
             <input class="inputSinopse" type="text" placeholder="Insira a sinopse da obra">
+            
           </form>
         </div>  
-        <button class="botao">adicionar</button>
+        
       </div>  
       
       
