@@ -1,9 +1,0 @@
-CREATE TABLE IF NOT EXISTS Midia (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome VARCHAR ,
-    tipo VARCHAR,
-    trailer VARCHAR,
-    descricao VARCHAR,
-    adicionado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-    
-)
