@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  background-color: #000000;
+}
+.header {
+  height: 10vh;
+  width: 100%;
+  background-color: #0c0c0c;
+
+  display: flex;
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#mainMenu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ffff;
+  padding: 0 2%;
+}
+.searchBar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+.searchBar > input {
+  background-color: #fff;
+  padding-left: 1%;
+  width: 20vw;
+}
+
+#mainMenu > h1 {
+  font-family: "Bebas Neue", cursive;
+}
+#navigation > ul {
+  margin-right: 30%;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+#navigation > ul > li {
+  display: inline;
+}
+#navigation > ul > li > a {
+  font-family: "Roboto";
+  font-size: 20px;
+  padding: 0 40px 0 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.containerMovie {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+}
+#moviesList > ul > li {
+  display: inline;
+  cursor: pointer;
+}
+#moviesList > ul > li > a {
+  margin-left: 2%;
+  margin-top: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+.containerTitle {
+  width: 537;
+  height: 22%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+.title01 {
+  padding-left: 2%;
+  padding-bottom: 45%;
+  font-size: 36;
+  font-family: "Inter", sans-serif;
+  color: #ffff;
+}
+
+.search_page {
+  padding-top: 10%;
+  padding-left: 2%;
+}
+ul {
+  list-style-type: none;
+}
+#enquadramento_pesquisa {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#enquadramento_pesquisa > li {
+  background-color: #283eb4;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  cursor: pointer;
+}
+strong {
+  color: #000000;
+}
+
+/*id da barra de mais*/
+
+#more {
+  background-color: #283eb4;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  margin-left: 81%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#titulo_pesquisa {
+  background-color: #283eb4;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+  text-align: left;
+  padding: 2px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-left: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+}
+
+#conteudo_pesquisa {
+  background-color: #283eb4;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.style_img {
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+#resultado_filme_books {
+  color: #fff;
+}
+
+#resultado_filme_books > li {
+  background-color: #283eb4;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 15%;
+  position: relative;
+}
+#resultado_filme_books > li > a {
+  color: #fff;
+}
+#titulo_centro {
+  position: absolute;
+  top: 50%;
+  margin-left: 40%;
+  font-size: 16px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 26px;
+  display: flex;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}

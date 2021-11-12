@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  background-color: #fff;
+}
+.header {
+  height: 10vh;
+  width: 100%;
+  background-color: #0c0c0c;
+
+  display: flex;
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#mainMenu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ffff;
+  padding: 0 2%;
+}
+.searchBar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+.searchBar > input {
+  background-color: #fff;
+  padding-left: 1%;
+  width: 20vw;
+}
+
+#mainMenu > h1 {
+  font-family: "Bebas Neue", cursive;
+}
+#navigation > ul {
+  margin-right: 30%;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+#navigation > ul > li {
+  display: inline;
+}
+#navigation > ul > li > a {
+  font-family: "Roboto";
+  font-size: 20px;
+  padding: 0 40px 0 0;
+  display: inline-block;
+  cursor: pointer;
+}
+.capa_background {
+  background-color: #d3d3d3;
+  width: 425px;
+  height: 493px;
+  left: 46px;
+  top: 234px;
+  margin-left: 10px;
+}
+
+.capa_background > p {
+  text-align: center;
+  margin-top: 10%;
+  padding-top: 50%;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #808080;
+}
+
+.inputCapa {
+  display: flex;
+  flex-direction: column;
+}
+.inputCapa > input {
+  width: 425px;
+  height: 60px;
+  left: 49px;
+  top: 741px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: #ffffff;
+  border: 2px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inputTitulo {
+  height: 60px;
+  width: 400px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: #ffffff;
+  border: 2px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: inset 0px 4px 4px rgb(0 0 0 / 25%);
+  font-family: Antonio;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 38px;
+  padding-left: 22%;
+}
+.inputSinopse {
+  width: 424px;
+  height: 298px;
+  left: 49px;
+  top: 741px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: #ffffff;
+  border: 2px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: Antonio;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 38px;
+
+  color: #acacac;
+}
+.tituloCapa {
+  left: calc(50% - 192px / 2 - 461px);
+  top: 145px;
+  bottom: 805px;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 67px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 10%;
+}
+.h1Capa {
+  text-align: center;
+}
+
+.divCapa {
+  margin-top: 5%;
+  margin-right: 10%;
+  margin-left: 4%;
+}
+.formCapa {
+  flex-direction: column;
+}
+
+.divPrincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.botao {
+  width: 200px;
+  height: 55px;
+  background-color: #000000;
+  color: #fff;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 31px;
+  margin-left: 26%;
+}
+
+#arrow {
+  padding-left: 38%;
+  color: #808080;
+  font-size: 100px;
+}
+.formStyle {
+  display: flex;
+  justify-content: space-around;
+}
+.all {
+  margin: 10px;
+  padding-left: 10px;
+  width: 370px;
+  height: 30px;
+}
