@@ -1,21 +1,35 @@
 <?php
 include_once __DIR__ . '/../../db/Database.php';
-
+ 
+session_start();
 
 try {
   Database::createSchema(); // cria o schema do banco de dados
 
   $db = Database::getInstance();
+   $imagem=filter_input(INPUT_POST,'imagem',FILTER_SANITIZE_STRING);
+   if($imagem){
+    filter_input(INPUT_POST,'imagem',FILTER_SANITIZE_STRING);
+
+   }else{
+   // $_SESSION['msg'] =  "p style = 'color:red';>ErrO ao salvar os dados</p>";
+   }
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (key_exists('nome', $_POST) && $_POST['nome'] !== '') {
-      $stm = $db->prepare('INSERT INTO Midia (nome,tipo,descricao,trailer) VALUES (:nome,:tipo,:descricao,:trailer)');
+      $stm = $db->prepare('INSERT INTO Midia (nome,tipo,descricao,trailer,imagem) VALUES (:nome,:tipo,:descricao,:trailer,:imagem)');
       // $stm->execute(array(':nome' => $_POST['nome'],),);
 
+     /*  $ultimo_id = $stm->lastInsertId();
+      $diretorio='/../../assets/movieImages/'.ultimo_id.'/'; // Local em que imagem será salva
+      //criar pasta de foto
+      mkdir($diretorio,0755);  */// 0755 é o número da permissão
 
       $stm->execute(
-        array('nome' => $_POST['nome'], 'tipo' => $_POST['tipo'],  'trailer' => $_POST['trailer'], 'descricao' => $_POST['descricao'])
+        array('nome' => $_POST['nome'], 'tipo' => $_POST['tipo'],  'trailer' => $_POST['trailer'], 'descricao' => $_POST['descricao'],'imagem' => $_POST['imagem'])
+        
       );
+     
     }
   }
 
@@ -76,20 +90,19 @@ try {
       <div class="divPrincipal">
         <div class="">
           <!-- Esta div e responsavel por pela capa, categoria, duração e URL do filme-->
-          <div class="capa_background">
-            <p>Arraste e solte capa aqui</p>
-            <i class="material-icons" id="arrow">north</i>
-          </div>
+         
           <div class="formMin">
-            <input name="nome" class="all" type="text" placeholder="Título">
-            <input name="trailer" class="all" type="text" placeholder="URL do Trailer">
+            <input class = "all" type="file" name ="imagem"/>
+            <br/>
+            <input name="nome" class="all" type="text" placeholder="Título"/>
+            <input name="trailer" class="all" type="text" placeholder="URL do Trailer"/>
           </div>
         </div>
         <!-- Esta div e responsavel por pela capa, categoria, duração e URL do filme-->
         <div class="capa">
           <input class="all" name="tipo" type="text" placeholder="Categoria da obra">
           <input class="all" name="descricao" type="text" placeholder="Insira a sinopse da obra">
-          <button type="submit" class="botao">adicionar</button>
+          <button  name = "sendCadImg" type="submit" class="botao">adicionar</button>
         </div>
       </div>
       </div>
