@@ -1,7 +1,7 @@
 # MinhaCritica
 
 <p align="center">
-    <img width="800" src="/src/assets/PresentationGif">
+    <img width="800" src="/src/assets/PresentationGif.gif">
  </p
 
 # Descrição
