@@ -11,6 +11,9 @@ try {
             $stm = $db->prepare('INSERT INTO Usuarios (nome) VALUES (:nome)');
             $stm->execute(array(':nome' => $_POST['nome']));
             echo 'Nome inserido com sucesso! <br/><br/>';
+        } else {
+            $stm = $db->prepare('DELETE FROM Usuarios'); // apaga todos os dados do banco
+            $stm->execute();
         }
     }
 
