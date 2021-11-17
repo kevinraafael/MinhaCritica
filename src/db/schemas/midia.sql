@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS Midia (
     tipo VARCHAR,
     trailer VARCHAR,
     descricao VARCHAR,
+    imagem VARCHAR,
     adicionado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+   
     
 )
