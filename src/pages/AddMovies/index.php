@@ -12,13 +12,13 @@ try {
     filter_input(INPUT_POST,'imagem',FILTER_SANITIZE_STRING);
 
    }else{
-   // $_SESSION['msg'] =  "p style = 'color:red';>ErrO ao salvar os dados</p>";
+    $_SESSION['msg'] =  "p style = 'color:red';>ErrO ao salvar os dados</p>";
    }
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (key_exists('nome', $_POST) && $_POST['nome'] !== '') {
       $stm = $db->prepare('INSERT INTO Midia (nome,tipo,descricao,trailer,imagem) VALUES (:nome,:tipo,:descricao,:trailer,:imagem)');
-      // $stm->execute(array(':nome' => $_POST['nome'],),);
+      $stm->execute(array(':nome' => $_POST['nome'],),);
 
      /*  $ultimo_id = $stm->lastInsertId();
       $diretorio='/../../assets/movieImages/'.ultimo_id.'/'; // Local em que imagem será salva
@@ -33,7 +33,7 @@ try {
     }
   }
 
-  //$usuarios = $db->query('SELECT * FROM Usuarios ORDER BY adicionado_em DESC')->fetchAll();
+  $usuarios = $db->query('SELECT * FROM Usuarios ORDER BY adicionado_em DESC')->fetchAll();
 } catch (\Throwable $th) {
   echo $th;
   die(1);
@@ -50,6 +50,8 @@ try {
   <link rel="stylesheet" href="index.css" />
   <!--Link do Icone-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="..\.\\index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Minha Crtitica</title>
 </head>
 
@@ -78,7 +80,7 @@ try {
               <a> Livros </a>
             </li>
             <li>
-              <a> Login </a>
+              <a onclick="login()"> Login </a>
             </li>
           </ul>
         </nav>

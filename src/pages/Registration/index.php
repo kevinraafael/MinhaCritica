@@ -36,6 +36,8 @@ try {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minha Crítica</title>
   <link href="index.css" rel="stylesheet" />
+  <script src="..\.\\index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -48,10 +50,10 @@ try {
       <nav id="navigation">
         <ul>
           <li>
-            <a> Início </a>
+            <a onclick="goToHomePage()"> Início </a>
           </li>
           <li>
-            <a> Filmes </a>
+            <a onclick="movieMenu()"> Filmes </a>
           </li>
           <li>
             <a> Séries </a>
@@ -60,7 +62,7 @@ try {
             <a> Livros </a>
           </li>
           <li>
-            <a> Login </a>
+            <a onclick="login()"> Login </a>
           </li>
         </ul>
       </nav>
