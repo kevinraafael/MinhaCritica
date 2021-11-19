@@ -1,35 +1,46 @@
 <?php
 include_once __DIR__ . '/../../db/Database.php';
- 
+
 session_start();
 
 try {
   Database::createSchema(); // cria o schema do banco de dados
 
   $db = Database::getInstance();
-   $imagem=filter_input(INPUT_POST,'imagem',FILTER_SANITIZE_STRING);
-   if($imagem){
+
+  /*  if($imagem){
     filter_input(INPUT_POST,'imagem',FILTER_SANITIZE_STRING);
 
    }else{
-   // $_SESSION['msg'] =  "p style = 'color:red';>ErrO ao salvar os dados</p>";
+ $_SESSION['msg'] =  "p style = 'color:red';>ErrO ao salvar os dados</p>";
    }
-
+ */
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (key_exists('nome', $_POST) && $_POST['nome'] !== '') {
-      $stm = $db->prepare('INSERT INTO Midia (nome,tipo,descricao,trailer,imagem) VALUES (:nome,:tipo,:descricao,:trailer,:imagem)');
-      // $stm->execute(array(':nome' => $_POST['nome'],),);
+      if ($_FILES['imagem']['error'] != UPLOAD_ERR_OK) {
+        die();
+        //ToDo
+        // deu errado
+      }
 
-     /*  $ultimo_id = $stm->lastInsertId();
-      $diretorio='/../../assets/movieImages/'.ultimo_id.'/'; // Local em que imagem será salva
+      $stm = $db->prepare('INSERT INTO Midia (nome,tipo,descricao,trailer,imagem) VALUES (:nome,:tipo,:descricao,:trailer,:imagem)');
+
+      //$ultimo_id = $stm->lastInsertId();
+      // ('sqlite:'. __DIR__.'\..\db.sqlite3');
+      $diretorio = __DIR__ . '\..\..\uploads';
+      //  $diretorio='/../../assets/uploads/'; // Local em que imagem será salva
       //criar pasta de foto
-      mkdir($diretorio,0755);  */// 0755 é o número da permissão
+      mkdir($diretorio, 0755);  /// 0755 é o número da permissão 
+      //var_dump($imagem);
+      $imagem = $_FILES['imagem'];
+      $nomeArquivo = 'Hudson_' . $imagem['name']; // substitui pelo id da sessao
 
       $stm->execute(
-        array('nome' => $_POST['nome'], 'tipo' => $_POST['tipo'],  'trailer' => $_POST['trailer'], 'descricao' => $_POST['descricao'],'imagem' => $_POST['imagem'])
-        
+        array('nome' => $_POST['nome'], 'tipo' => $_POST['tipo'],  'trailer' => $_POST['trailer'], 'descricao' => $_POST['descricao'], 'imagem' => $nomeArquivo)
+
       );
-     
+
+      move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio  . "\\" . $nomeArquivo);
     }
   }
 
@@ -86,23 +97,26 @@ try {
     </div>
     <!-- MENU-->
     <!-- Capa , Título e Sinopse-->
-    <form method="POST" class="formStyle">
+    <form enctype="multipart/form-data" method="POST" class="formStyle">
       <div class="divPrincipal">
         <div class="">
           <!-- Esta div e responsavel por pela capa, categoria, duração e URL do filme-->
-         
+
           <div class="formMin">
-            <input class = "all" type="file" name ="imagem"/>
-            <br/>
-            <input name="nome" class="all" type="text" placeholder="Título"/>
-            <input name="trailer" class="all" type="text" placeholder="URL do Trailer"/>
+            <!--             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+ -->
+            <input class="all" type="file" name="imagem" />
+
+            <br />
+            <input name="nome" class="all" type="text" placeholder="Título" />
+            <input name="trailer" class="all" type="text" placeholder="URL do Trailer" />
           </div>
         </div>
         <!-- Esta div e responsavel por pela capa, categoria, duração e URL do filme-->
         <div class="capa">
           <input class="all" name="tipo" type="text" placeholder="Categoria da obra">
           <input class="all" name="descricao" type="text" placeholder="Insira a sinopse da obra">
-          <button  name = "sendCadImg" type="submit" class="botao">adicionar</button>
+          <button name="sendCadImg" type="submit" class="botao">adicionar</button>
         </div>
       </div>
       </div>
