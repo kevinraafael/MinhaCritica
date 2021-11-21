@@ -59,6 +59,8 @@
   padding: 0 40px 0 0;
   display: inline-block;
   cursor: pointer;
+  color: #fff;
+  text-decoration: none;
 }
 .infoContainer {
   width: 100%;
@@ -133,4 +135,8 @@
   color: #001aff;
   font-size: 18px;
   margin-bottom: 10%;
+}
+.containerButton > a {
+  color: #fff;
+  text-decoration: none;
 }

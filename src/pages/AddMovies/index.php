@@ -59,7 +59,10 @@ try {
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="index.css" />
-  <!--Link do Icone-->
+
+  <style>
+    <?php include "index.css" ?>
+  </style>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Minha Crtitica</title>
 </head>
@@ -77,7 +80,7 @@ try {
         <nav id="navigation">
           <ul>
             <li>
-              <a> Início </a>
+              <a href="<?= "/" ?>home"> Início </a>
             </li>
             <li>
               <a onclick="menuFilme()"> Filmes </a>
@@ -89,7 +92,7 @@ try {
               <a> Livros </a>
             </li>
             <li>
-              <a> Login </a>
+              <a href="<?= "/" ?>login"> Login </a>
             </li>
           </ul>
         </nav>
