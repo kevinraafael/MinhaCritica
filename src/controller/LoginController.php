@@ -4,8 +4,8 @@
 namespace src\controller;
 
 
-
 use PDOException;
+use Usuario;
 
 /**
  * Classe responsável pela gestão das atividades relacionadas ao usuário.
@@ -23,12 +23,26 @@ class LoginController extends Controller
      *  Método construtor da classe.
      *  Ao ser instanciado, inicia a seção e verifica se já existe um usuário logado.
      */
-    /* function __construct()
+     function __construct()
     {
         session_start();
         if (isset($_SESSION['user'])) $this->loggedUser = $_SESSION['user'];
     }
- */
+
+    public function cadastro()
+    {
+       $user = new Usuario($_POST['nome'],$_POST['email'],$_POST['senha']);
+      
+
+        try {
+            $user->salvar();
+            header('Location:/login?email='.$_POST['email'].'&mensagem=Usuario cadastrado com sucesso');
+        } catch (\Throwable $th) {
+            header('Location:/register?email='.$_POST['email'].'&mensagem=Usuario já cadastrado na plataforma');        }
+
+      
+    }
+
 
     /**
      *  Função que renderiza a página (visão) de login
@@ -45,17 +59,17 @@ class LoginController extends Controller
      *  Função que trata de verificar a identididade de um usuário.
      *  Se correta, adiciona o usuário à seção para o mesmo não precise fazer novamente.
      */
-    /* public function login(): void
+     public function login(): void
     {
-        $usuario = Usuario::buscarUsuario($_POST['email']);
+        $user = Usuario::buscar($_POST['email']);
 
-        if ($usuario && $usuario->igual($_POST['email'], $_POST['senha'])) {
-            $_SESSION['user'] = $this->loggedUser = $usuario;
+        if (isset($user) && $user->igual($_POST['email'], $_POST['senha'])) {
+            $_SESSION['user'] = $this->loggedUser = $user;
             header('Location: /user/info');
         } else {
-            header('Location: ' . BASEPATH . 'login?email=' . $_POST['email'] . '&mensagem=Usuário e/ou senha incorreta!');
+            header('Location:login?email=' . $_POST['email'] . '&mensagem=Usuário e/ou senha incorreta!');
         }
-    } */
+    } 
 
     /**
      *  Função que renderiza a página (visão) de cadastro
@@ -79,6 +93,14 @@ class LoginController extends Controller
     /**
      *  Função que remove o usuário da seção (deslogar)
      */
+    public function sair(){
+        if(!$this->loggedUser){
+            header('Location: /Login?messagem=Voce precisa se identificar primeiro');
+            return;
+        }
+        unset($_SESSION['user']);
+        header('Location: /Login?messagem=Usuario deslogado com sucesso');
+    }
 
 
     /**

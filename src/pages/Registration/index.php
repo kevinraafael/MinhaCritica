@@ -79,18 +79,19 @@ function UserRegister(): void
     </div>
     <div class="cadastro">
       <!--entrada dos dados do usuario -->
-      <div class="div_esq">
-        <form method="POST" class="form">
+      <form method="POST" class="form">
+        <div class="div_esq">
+          
 
-          <input type="text" name="nome" id="nome" placeholder="Nome">
+            <input type="text" name="nome" id="nome" placeholder="Nome">
 
-          <input type="text" name="email" id="email" placeholder="E-mail" />
-          <input type="password" name="senha" placeholder="Senha" />
-          <input type="password" name="confirmarSenha" placeholder="Confirmar Senha" />
-          <button type="submit" class="botao_registro">Confirmar</button>
+            <input type="text" name="email" id="email" placeholder="E-mail" />
+            <input type="password" name="senha" placeholder="Senha" />
+            <input type="password" name="confirmarSenha" placeholder="Confirmar Senha" />
+            <button type="submit" class="botao_registro">Confirmar</button>
 
-        </form>
-      </div>
+        </div>
+      </form>
       <!--entrada dos dados do usuario -->
 
       <div class="div_dir">
