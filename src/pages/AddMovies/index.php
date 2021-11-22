@@ -64,7 +64,7 @@ try {
   <title>Minha Crtitica</title>
 </head>
 
-<body>
+
 
   <body class="body">
     <!-- MENU-->
@@ -74,6 +74,8 @@ try {
           <h1>Minha Crítica</h1>
           <input type="text" id="search" name="searchBox" placeholder="Pesquise aqui" />
         </div>
+        <input type="checkbox" id="bt_menu" />
+        <label for="bt_menu">&#9776;</label>
         <nav id="navigation">
           <ul>
             <li>
@@ -99,27 +101,28 @@ try {
     <!-- Capa , Título e Sinopse-->
     <form enctype="multipart/form-data" method="POST" class="formStyle">
       <div class="divPrincipal">
-        <div class="">
+        <div>
           <!-- Esta div e responsavel por pela capa, categoria, duração e URL do filme-->
-
+          <h1 class="capa">Capa</h1>
           <div class="formMin">
-            <!--             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
- -->
-            <input class="all" type="file" name="imagem" />
-
-            <br />
+            <!--<input type="hidden" name="MAX_FILE_SIZE" value="30000" />-->
+            <br/>
+            <div class="inputCapa">
+            <input class="all" id="inserirImg" type="file" name="imagem"  />
+            </div>
+            <h1 class="capa">Titulo</h1>
             <input name="nome" class="all" type="text" placeholder="Título" />
             <input name="trailer" class="all" type="text" placeholder="URL do Trailer" />
-          </div>
+         </div>
         </div>
         <!-- Esta div e responsavel por pela capa, categoria, duração e URL do filme-->
-        <div class="capa">
+        <div class="divCapa">
+          
           <input class="all" name="tipo" type="text" placeholder="Categoria da obra">
+          <h1 class="capa">Sinopse</h1>
           <input class="all" name="descricao" type="text" placeholder="Insira a sinopse da obra">
-          <button name="sendCadImg" type="submit" class="botao">adicionar</button>
         </div>
-      </div>
-      </div>
+        <button name="sendCadImg" type="submit" class="botao">adicionar</button>
       </div>
     </form>
     <!-- Capa , Título e Sinopse-->

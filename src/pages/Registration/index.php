@@ -45,6 +45,8 @@ try {
         <h1>Minha Crítica</h1>
         <input type="text" id="search" name="searchBox" placeholder="Pesquise aqui" />
       </div>
+      <input type="checkbox" id="bt_menu" />
+        <label for="bt_menu">&#9776;</label>
       <nav id="navigation">
         <ul>
           <li>
@@ -75,26 +77,13 @@ try {
       <!--entrada dos dados do usuario -->
       <div class="div_esq">
         <form method="POST" class="form">
-
           <input type="text" name="nome" id="nome" placeholder="Nome">
-
           <input type="text" name="email" id="email" placeholder="E-mail" />
           <input type="password" name="senha" placeholder="Senha" />
           <input type="password" name="confirmarSenha" placeholder="Confirmar Senha" />
           <button type="submit" class="botao_registro">Confirmar</button>
-
         </form>
       </div>
-      <!--entrada dos dados do usuario -->
-
-      <div class="div_dir">
-        <!--entrada dos dados do usuario -->
-        <form class="form">
-
-
-        </form>
-      </div>
-      <!--entrada dos dados do usuario -->
     </div>
     <!-- casdastro-->
   </div>
