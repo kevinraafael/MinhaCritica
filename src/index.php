@@ -14,16 +14,13 @@ $loginController = new LoginController();
 $homeController = new HomeController();
 $movieController = new MovieController();
 // Add the first route
-Route::add('/cadastro', fn () => $loginController->register(), ['get']);
+Route::add('/cadastro', fn () => $loginController->registerIndex(), ['get']);
 Route::add('/login', fn () => $loginController->loginIndex(), ['get']);
 
 Route::add('/home', fn () => $homeController->homeIndex(), ['get']);
 Route::add('/addMovie', fn () => $movieController->addMovieIndex(), ['get']);
 
-Route::add('/cadastro', fn () => $loginController->register(), ['post']);
+Route::add('/cadastro', fn () => $loginController->register(), ['POST']);
 
-/* Route::add('/pages/home/index.html', function ($id) {
-}, 'get'); */
 
-// Run the router
 Route::run('/');
