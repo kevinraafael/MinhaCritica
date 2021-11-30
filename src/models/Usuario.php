@@ -1,6 +1,6 @@
 <?php
 
-namespace src\models\Usuario;
+namespace src\models;
 
 use src\Database;
 

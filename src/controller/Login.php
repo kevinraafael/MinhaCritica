@@ -6,7 +6,7 @@ namespace src\controller;
 
 
 use PDOException;
-use src\models\Usuario\Usuario;
+use src\models\Usuario;
 
 
 
@@ -25,10 +25,8 @@ class LoginController extends Controller
 
         // try  {
         $user = new Usuario($_POST['nome'], $_POST['email'], $_POST['senha']);
-        echo " erro no try user";
-        var_dump($user);
-        // $user->salvar();
-        echo "Sucesso no Register";
+        $user->salvar();
+        $this->registerIndex();
     }
 
     public function registerIndex(): void
