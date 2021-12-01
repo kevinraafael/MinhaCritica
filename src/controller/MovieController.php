@@ -2,6 +2,8 @@
 
 namespace src\controller;
 
+use src\models\Midia;
+
 class MovieController extends Controller
 {
     public function addMovieIndex(): void
@@ -9,5 +11,15 @@ class MovieController extends Controller
         //if (!$this->loggedUser) {
         $this->view('/pages/AddMovies/index');
         // } 
+    }
+
+    public function addMovieRegister(): void
+    {
+        // try{
+        $midia = new Midia($_POST['nome'], $_POST['tipo'], $_POST['trailer'], $_POST['descricao'], $_POST['']);
+        $midia->salvar();
+        // }catch(error){
+
+        // }
     }
 }

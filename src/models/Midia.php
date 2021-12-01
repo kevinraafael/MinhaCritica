@@ -83,11 +83,16 @@ class Midia
         $stm = $db->prepare('INSERT INTO Usuarios (nome, tipo, trailer,descricao,imagem) VALUES (:nome, :tipo, :trailer,:descricao,:imagem)');
         $stm->bindValue(':nome', $this->nome);
         $stm->bindValue(':tipo', $this->tipo);
-        $stm->bindValue(':trailer', $this->senha);
+        $stm->bindValue(':descricao', $this->descricao);
+        $stm->bindValue(':imagem', $this->imagem);
+        $imagem = $_FILES['imagem'];
+        $nomeArquivo = 'imagem_' . $imagem['name'];
+        $diretorio = __DIR__ . '\..\..\uploads';
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio  . "\\" . $nomeArquivo);
         $stm->execute(
-            array('nome' => $_POST['nome'], 'email' => $_POST['email'], 'senha' => hash('sha256', $_POST['senha']))
+            array('nome' => $_POST['nome'], 'tipo' => $_POST['tipo'], 'descricao' => $_POST['descricao'], 'imagem' => $_POST['imagem'])
         );
-        echo "To em salvar";
+        echo "To em salvar filme";
     }
 
 
