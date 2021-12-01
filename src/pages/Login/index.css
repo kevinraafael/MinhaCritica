@@ -59,6 +59,8 @@
   padding: 0 40px 0 0;
   display: inline-block;
   cursor: pointer;
+  color: #fff;
+  text-decoration: none;
 }
 .infoContainer {
   width: 100%;
@@ -133,6 +135,7 @@
   font-size: 18px;
   margin-bottom: 10%;
 }
+<<<<<<< HEAD
 
 /*================================================================ Responsividade============================================================================*/
 label[for="bt_menu"] {
@@ -211,4 +214,9 @@ label[for="bt_menu"] {
   #button {
     font-size: 16px;
   }
+=======
+.containerButton > a {
+  color: #fff;
+  text-decoration: none;
+>>>>>>> 874bf8fbe02e0035c0ea0f8b26f6688bac42a0c4
 }

@@ -59,12 +59,16 @@ try {
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="index.css" />
-  <!--Link do Icone-->
+
+  <style>
+    <?php include "index.css" ?>
+  </style>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Minha Crtitica</title>
 </head>
 
 
+<<<<<<< HEAD
 
 <body class="body">
   <!-- MENU-->
@@ -73,6 +77,35 @@ try {
       <div class="searchBar">
         <h1>Minha Crítica</h1>
         <input type="text" id="search" name="searchBox" placeholder="Pesquise aqui" />
+=======
+  <body class="body">
+    <!-- MENU-->
+    <div class="header">
+      <div id="mainMenu">
+        <div class="searchBar">
+          <h1>Minha Crítica</h1>
+          <input type="text" id="search" name="searchBox" placeholder="Pesquise aqui" />
+        </div>
+        <nav id="navigation">
+          <ul>
+            <li>
+              <a href="<?= "/" ?>home"> Início </a>
+            </li>
+            <li>
+              <a onclick="menuFilme()"> Filmes </a>
+            </li>
+            <li>
+              <a> Séries </a>
+            </li>
+            <li>
+              <a> Livros </a>
+            </li>
+            <li>
+              <a href="<?= "/" ?>login"> Login </a>
+            </li>
+          </ul>
+        </nav>
+>>>>>>> 874bf8fbe02e0035c0ea0f8b26f6688bac42a0c4
       </div>
       <input type="checkbox" id="bt_menu" />
       <label for="bt_menu">&#9776;</label>

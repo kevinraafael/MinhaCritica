@@ -1,7 +1,13 @@
 <?php
+
+namespace src;
+
+use PDO;
+
 final class Database
 {
-    private static $conexao;
+    static $conexao;
+    static $db;
     private function construct()
     {
     }
@@ -9,7 +15,7 @@ final class Database
     public static function getInstance(): PDO
     {
         if (is_null(self::$conexao)) {
-            self::$conexao = new PDO('sqlite:'. __DIR__.'\..\db.sqlite3');
+            self::$conexao = new PDO('sqlite:' . __DIR__ . '\..\db.sqlite3');
         }
         return self::$conexao;
     }

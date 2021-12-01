@@ -2,30 +2,8 @@
 include_once __DIR__ . '/../../db/Database.php';
 
 
-try {
-  Database::createSchema(); // cria o schema do banco de dados
 
-  $db = Database::getInstance();
 
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (key_exists('nome', $_POST) && $_POST['nome'] !== '') {
-      $stm = $db->prepare('INSERT INTO Usuarios (nome,email,senha) VALUES (:nome,:email,:senha)');
-      // $stm->execute(array(':nome' => $_POST['nome'],),);
-     
-      
-      $stm->execute(
-        array('nome' => $_POST['nome'], 'email' => $_POST['email'], 'senha' =>hash('sha256', $_POST['senha']))
-      );
-
-      
-    }
-  } 
-
-  //$usuarios = $db->query('SELECT * FROM Usuarios ORDER BY adicionado_em DESC')->fetchAll();
-} catch (\Throwable $th) {
-  echo $th;
-  die(1);
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +13,9 @@ try {
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minha Crítica</title>
-  <link href="index.css" rel="stylesheet" />
+  <style>
+    <?php include "index.css" ?>
+  </style>
 </head>
 
 <body>
@@ -80,7 +60,7 @@ try {
           <input type="text" name="nome" id="nome" placeholder="Nome">
           <input type="text" name="email" id="email" placeholder="E-mail" />
           <input type="password" name="senha" placeholder="Senha" />
-          <input type="password" name="confirmarSenha" placeholder="Confirmar Senha" />
+          <!--    <input type="password" name="confirmarSenha" placeholder="Confirmar Senha" /> -->
           <button type="submit" class="botao_registro">Confirmar</button>
         </form>
       </div>
