@@ -33,7 +33,21 @@ class LoginController extends Controller
     {
         $this->view('/pages/Registration/index');
     }
+    public function login(): void
+    {
+        $user = Usuario::buscarUsuario($_POST['email']);
+        var_dump($user);
+        echo "entrei";
 
+        if (isset($user) && $user->igual($_POST['email'], $_POST['senha'])) {
+           echo "entrei aqui";
+            $_SESSION['user'] = $this->loggedUser = $user;
+            header('Location: /Profile/index');
+        } else {
+            echo "entrei no else";
+            header('Location:login?email=' . $_POST['email'] . '&mensagem=Usuário e/ou senha incorreta!');
+        }
+    } 
 
     public function loginIndex(): void
     {

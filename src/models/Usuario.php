@@ -84,13 +84,13 @@ class Usuario
     {
         $db = Database::getInstance();
         $stm = $db->prepare('SELECT email, nome, senha FROM Usuarios WHERE email = :email');
-        $stm->bindParam(':email', $email);
+        $stm->bindValue(':email', $email);
 
         $stm->execute();
         $resultado = $stm->fetch();
 
-        if ($resultado) {
-            $usuario = new Usuario($resultado['email'], $resultado['senha'], $resultado['nome']);
+        if($resultado) {
+            $usuario = new Usuario($resultado['nome'], $resultado['email'], $resultado['senha']);
             $usuario->senha = $resultado['senha'];
             return $usuario;
         } else {

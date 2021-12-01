@@ -60,17 +60,19 @@
             <div class="loginContainer">
                 <div class=mainTitle>Login</div>
                 <div class="input">
-                    <input type="text" id="user" name="userInput" placeHolder="Usuário" />
-                    <input type="text" id="password" name=passorwdInput placeholder="Senha" />
-                    <div class="containerPassword">
-                        <a id="forgivePassowrd">
-                            Esqueceu a senha ?
-                        </a>
-                    </div>
-                    <a class="containerButton">
-                        Entrar
+                    <form method="POST">
+                        <input type="email" id="user" name="userInput" placeHolder="Usuário" />
+                        <input type="password" id="password" name=passorwdInput placeholder="Senha" />
+                        <div class="containerPassword">
+                            <a id="forgivePassowrd">
+                                Esqueceu a senha ?
+                            </a>
+                        </div>
+                        <button class="containerButton" type="submit">
+                            Entrar
 
-                    </a>
+                        </button>
+                    </form>    
                 </div>
             </div>
             <div class="loginContainer">

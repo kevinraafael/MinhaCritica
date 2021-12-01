@@ -26,6 +26,7 @@ Route::add('/home', fn () => $homeController->homeIndex(), ['get']);
 Route::add('/addMovie', fn () => $movieController->addMovieIndex(), ['get']);
 
 Route::add('/cadastro', fn () => $loginController->register(), ['POST']);
+Route::add('/login', fn () => $loginController->login(), ['POST']);
 
 
 Route::run('/');
