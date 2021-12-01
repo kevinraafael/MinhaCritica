@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Crítica</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <div id="mainMenu">
+        <div class="searchBar">
+          <h1>Minha Crítica</h1>
+          <input
+            type="text"
+            id="search"
+            name="searchBox"
+            placeholder="Pesquise aqui"
+          />
+        </div>
+        <nav id="navigation">
+          <ul>
+            <li>
+              <a onclick="goToHomePage()"> Início </a>
+            </li>
+            <li>
+              <a> Filmes </a>
+            </li>
+            <li>
+              <a> Séries </a>
+            </li>
+            <li>
+              <a> Livros </a>
+            </li>
+            <li>
+              <a onclick="login()"> Login </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="mainContainer">
+      <div class="movieContainer">
+        <div class="moviePoster">
+          <img
+            height="450"
+            width="300"
+            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wTS3dS2DJiMFFgqKDz5fxMTri.jpg"
+          />
+        </div>
+        <div class="casting">
+          <div class="mainTitle">Elenco</div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src =
+              data:image/jpeg;base64,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
+              />
+              <h3>Margot Robbie</h3>
+            </div>
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src =
+              data:image/jpeg;base64,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
+              />
+              <h3>Margot Robbie</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="movieDescription">
+        <div class="MovieDescriptionTitle">O Esquadrão Suicida</div>
+        <div class="shortInfoContainer">
+          <div id="shortRounded">
+            <div id="shortRoundedText">05/08/2021</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">Fantasia</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">120 minutos</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">
+              <a href="https://www.youtube.com/watch?v=h6bWwRCtg28" id="trailer">Trailer </a>
+            </div>
+          </div>
+        </div>
+        <div class="containerText">
+          Os supervilões Harley Quinn, Bloodsport, Peacemaker e uma coleção de
+          malucos condenados da prisão de Belle Reve juntam-se à super-secreta
+          esuper-obscura Força Tarefa X, enquanto são deixados na remota ilha de
+          Corto Maltese para combater o inimigo. Lorem ipsum eu primis mollis
+          viverra ante aliquam commodo luctus, fermentum turpis imperdiet
+          conubia hac sodales orci molestie bibendum ullamcorper, justo quis
+          purus a facilisis praesent hendrerit tellus. in curabitur hac ornare
+          libero hendrerit integer vulputate donec, mauris rutrum vel tortor
+          ligula quis sagittis consectetur, mi ac ut praesent condimentum
+          sollicitudin malesuada. varius aenean nulla ultricies praesent
+          sagittis integer neque vehicula libero, vehicula netus vestibulum
+          libero class phasellus odio erat feugiat phasellus, malesuada enim et
+          integer rutrum orci felis lorem. hac mi fusce nullam consectetur
+          inceptos iaculis posuere vulputate, lobortis lacus ut varius class
+          justo eu, auctor fermentum suspendisse aliquet fames sit convallis.
+        </div>
+        <div class="AddCritic">
+          <h2>Adicionar Crítica</h2>
+          <img
+            src="data:image/png;base64,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"
+          />
+        </div>
+        <section class="usersCriticContainer">
+          <div id="criticsTitle">Incrível</div>
+          <div id="critic">
+            Esquadrão Suicida 2021 foi um grande acerto do diretor James Gunn,
+            superando o filme de 2016 com folga. Margot Robbie que foi um dos
+            poucos elementos elogiados no filme anterior, aqui ela continua
+            perfeita em sua atuação.
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src="../../assets//images/woman-perfil3.jpg" />
+              <h4>Amanda Mariano</h4>
+            </div>
+          </div>
+        </section>
+        <section class="usersCriticContainer">
+          <div id="criticsTitle">Interessante</div>
+          <div id="critic">
+            Esquadrão Suicida 2021 foi um grande acerto do diretor James Gunn,
+            superando o filme de 2016 com folga. Margot Robbie que foi um dos
+            poucos elementos elogiados no filme anterior, aqui ela continua
+            perfeita em sua atuação.
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src="../../assets//images/woman-perfil2.jpg" />
+              <h4>Luciana Abreu</h4>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

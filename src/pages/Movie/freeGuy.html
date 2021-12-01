@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Crítica</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <div id="mainMenu">
+        <div class="searchBar">
+          <h1>Minha Crítica</h1>
+          <input
+            type="text"
+            id="search"
+            name="searchBox"
+            placeholder="Pesquise aqui"
+          />
+        </div>
+        <nav id="navigation">
+          <ul>
+            <li>
+              <a onclick="goToHomePage()"> Início </a>
+            </li>
+            <li>
+              <a> Filmes </a>
+            </li>
+            <li>
+              <a> Séries </a>
+            </li>
+            <li>
+              <a> Livros </a>
+            </li>
+            <li>
+                <a onclick="login()"> Login </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="mainContainer">
+      <div class="movieContainer">
+        <div class="moviePoster">
+          <img
+            height="450"
+            width="300"
+            src="../../assets//images/freeguy.jpg"
+          />
+        </div>
+        <div class="casting">
+          <div class="mainTitle">Elenco</div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_%28cropped%29.jpg/240px-Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_%28cropped%29.jpg" />
+              <h3>Ryan Reynolds</h3>
+            </div>
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src ="https://upload.wikimedia.org/wikipedia/commons/c/ca/Jodie_Comer_during_an_interview%2C_September_2021.png"/>
+              <h3>Jodie Comer</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="movieDescription">
+        <div class="MovieDescriptionTitle">Free Guy</div>
+        <div class="shortInfoContainer">
+          <div id="shortRounded">
+            <div id="shortRoundedText">19/08/2021</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">Comédia</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">115 minutos</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">
+              <a href="https://www.youtube.com/watch?v=yL65RwsVjA8" id="trailer">Trailer </a>
+            </div>
+          </div>
+        </div>
+        <div class="containerText">
+            Um caixa de banco preso a uma entediante rotina tem sua vida
+            virada de cabeça para baixo quando ele descobre que é personagem
+            em um brutalmente realista vídeo game de mundo aberto. Agora
+            ele precisa aceitar sua realidade e lidar com o fato de que 
+            é o único que pode salvar o mundo.
+        </div>
+        <div class="AddCritic">
+          <h2>Adicionar Crítica</h2>
+          <img
+            src="data:image/png;base64,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"
+          />
+        </div>
+        <section class="usersCriticContainer">
+          <div id="criticsTitle">Interessante</div>
+          <div id="critic">
+            Filme bem interessante sobre a vida real e os personagens 
+            secundários dos games. Tudo muda quando um destes assume vida 
+            própria
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src="https://static8.depositphotos.com/1192060/958/i/950/depositphotos_9582563-stock-photo-attractive-older-woman.jpg" />
+              <h4>Jessica Andrade</h4>
+            </div>
+          </div>
+        </section>
+        <section class="usersCriticContainer">
+          <div id="criticsTitle">Engraçado</div>
+          <div id="critic">
+            Filme muito bom sobre games, bem divertido, com várias referências. contém 
+            até bugs do jogo kkk. Ryan Reynolds é o ator certo para interpretar Guy.
+            Um filme e engraçado que pode ser assistido por toda a família!!
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src="https://st3.depositphotos.com/12985790/15794/i/600/depositphotos_157947226-stock-photo-man-looking-at-camera.jpg" />
+              <h4>João Geraldo</h4>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

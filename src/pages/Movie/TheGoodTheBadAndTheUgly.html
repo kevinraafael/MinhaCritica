@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Crítica</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <div id="mainMenu">
+        <div class="searchBar">
+          <h1>Minha Crítica</h1>
+          <input
+            type="text"
+            id="search"
+            name="searchBox"
+            placeholder="Pesquise aqui"
+          />
+        </div>
+        <nav id="navigation">
+          <ul>
+            <li>
+              <a onclick="goToHomePage()"> Início </a>
+            </li>
+            <li>
+              <a> Filmes </a>
+            </li>
+            <li>
+              <a> Séries </a>
+            </li>
+            <li>
+              <a> Livros </a>
+            </li>
+            <li>
+                <a onclick="login()"> Login </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="mainContainer">
+      <div class="movieContainer">
+        <div class="moviePoster">
+          <img
+            height="450"
+            width="300"
+            src="../../assets//images/Clint.jpg"
+          />
+        </div>
+        <div class="casting">
+          <div class="mainTitle">Elenco</div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src = "data:image/jpeg;base64,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" />
+              <h3>Clint Eastwood</h3>
+            </div>
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src ="https://static.wikia.nocookie.net/dollarstrilogy/images/c/c7/Wallace.jpg"/>
+              <h3>Mario Brega</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="movieDescription">
+        <div class="MovieDescriptionTitle">3 Homens em Conflito</div>
+        <div class="shortInfoContainer">
+          <div id="shortRounded">
+            <div id="shortRoundedText">11/01/1968</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">Faroeste/Spaghetti western</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">120 minutos</div>
+          </div>
+          <div id="shortRounded">
+            <div id="shortRoundedText">
+              <a href="https://www.youtube.com/watch?v=lIVDryQDUS8" id="trailer">Trailer </a>
+            </div>
+          </div>
+        </div>
+        <div class="containerText">
+            Durante a Guerra Civil Americana, um pistoleiro misterioso e 
+            dois estrangeiros decidem juntar suas forças para encontrar 
+            um tesouro escondido. Cada um dos homens conhece apenas uma 
+            parte da localização da fortuna, o que força essa parceria. 
+            O problema é que nenhum deles tem a intenção de dividir a 
+            riqueza.
+        </div>
+        <div class="AddCritic">
+          <h2>Adicionar Crítica</h2>
+          <img
+            src="data:image/png;base64,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"
+          />
+        </div>
+        <section class="usersCriticContainer">
+          <div id="criticsTitle">Fantastico</div>
+          <div id="critic">
+            Simplesmente uma obra prima de Sérgio leone e incrível música 
+            de Murricone. Talvez seja o melhor "faroeste" de todos os tempos.
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src="https://lh6.googleusercontent.com/-bmB_cmm0sYQ/AAAAAAAAAAI/AAAAAAAAAAc/YoSXaCF_jPY/photo.jpg" />
+              <h4>Bruna Vargas </h4>
+            </div>
+          </div>
+        </section>
+        <section class="usersCriticContainer">
+          <div id="criticsTitle">Obra Prima</div>
+          <div id="critic">
+            A trilha sonora mais clássica de faroeste da história 
+            do cinema, e o filme de western mais cultuado também. 
+            Três Homens em Conflito é uma obra-prima, um espetáculo 
+            visual, um elenco excelente, atuações ótimas, e uma cena 
+            final das mais memoráveis dos filmes de bang-bang. 
+            Sergio Leone é um gênio.
+          </div>
+          <div class="profileContainer">
+            <div id="avatar">
+              <img src="https://lh5.googleusercontent.com/-dKyHh27ompw/AAAAAAAAAAI/AAAAAAAAAEc/S_fcawkus9w/photo.jpg" />
+              <h4>Felipe Bezerra</h4>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

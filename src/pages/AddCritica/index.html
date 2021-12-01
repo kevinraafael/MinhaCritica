@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Crítica</title>
+    <link href="index.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/21a77afff5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="..\.\\index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body class="body">
+    <div class="header">
+      <div id="mainMenu">
+        <div class="searchBar">
+          <h1>Minha Crítica</h1>
+          <input
+            type="text"
+            id="search"
+            name="searchBox"
+            placeholder="Pesquise aqui"
+            onkeydown="search()"
+          />
+        </div>
+        <input type="checkbox" id="bt_menu" />
+        <label for="bt_menu">&#9776;</label>
+
+        <nav id="navigation">
+          <ul>
+            <li>
+              <a> Início </a>
+            </li>
+            <li>
+              <a onclick="movieMenu()"> Filmes </a>
+            </li>
+            <li>
+              <a> Séries </a>
+            </li>
+            <li>
+              <a> Livros </a>
+            </li>
+            <li>
+              <a onclick="login()"> Login </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <a href=""> voltar </a>
+
+    <form action="post" class="criticafilme">
+      <img src="" alt="" />
+      <input type="text" placeholder="Digite sua critica aqui... " />
+      <div class="botaoaliamento">
+        <button type="submit" class="botaolayout">Cancelar</button>
+        <button type="submit" class="botaolayout">Publicar</button>
+      </div>
+    </form>
+  </body>
+</html>
