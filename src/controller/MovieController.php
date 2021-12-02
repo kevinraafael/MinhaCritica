@@ -16,8 +16,8 @@ class MovieController extends Controller
     public function addMovieRegister(): void
     {
         // try{
-        $midia = new Midia($_POST['nome'], $_POST['tipo'], $_POST['trailer'], $_POST['descricao'], $_POST['']);
-        $midia->salvar();
+        $midia = new Midia($_POST['nome'], $_POST['tipo'], $_POST['trailer'], $_POST['descricao'], $_POST['imagem']);
+        $midia->saveAll();
         // }catch(error){
 
         // }

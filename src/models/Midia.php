@@ -31,12 +31,15 @@ class Midia
     private $descricao;
 
     /**
-     * @var string Nome fornecido pelo usuário
+     *   $  Nome fornecido pelo usuário
+     */
+    /**
+     * @var $POST Nome fornecido pelo usuário
      */
     private $imagem;
 
 
-    function __construct(string $nome, string $tipo, string $trailer, string $descricao, string $imagem)
+    function __construct(string $nome, string $tipo, string $trailer, string $descricao, $imagem)
     {
 
         $this->nome = $nome;
@@ -88,10 +91,11 @@ class Midia
         $imagem = $_FILES['imagem'];
         $nomeArquivo = 'imagem_' . $imagem['name'];
         $diretorio = __DIR__ . '\..\..\uploads';
-        move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio  . "\\" . $nomeArquivo);
+
         $stm->execute(
             array('nome' => $_POST['nome'], 'tipo' => $_POST['tipo'], 'descricao' => $_POST['descricao'], 'imagem' => $_POST['imagem'])
         );
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio  . "\\" . $nomeArquivo);
         echo "To em salvar filme";
     }
 
@@ -144,4 +148,36 @@ class Midia
         $stm->bindValue(':email', $this->email);
         $stm->execute();
     } */
+
+    static public function saveAll(): void
+    {
+
+        if (key_exists('nome', $_POST) && $_POST['nome'] !== '') {
+            if ($_FILES['imagem']['error'] != UPLOAD_ERR_OK) {
+                die();
+                //ToDo
+                // deu errado
+            }
+            $db = Database::getInstance();
+
+            $stm = $db->prepare('INSERT INTO Midia (nome,tipo,descricao,trailer,imagem) VALUES (:nome,:tipo,:descricao,:trailer,:imagem)');
+
+            //$ultimo_id = $stm->lastInsertId();
+            // ('sqlite:'. __DIR__.'\..\db.sqlite3');
+            $diretorio = __DIR__ . '\..\..\uploads';
+            //  $diretorio='/../../assets/uploads/'; // Local em que imagem será salva
+            //criar pasta de foto
+            mkdir($diretorio, 0755);  /// 0755 é o número da permissão 
+            //var_dump($imagem);
+            $imagem = $_FILES['imagem'];
+            $nomeArquivo = 'Imagem' . $imagem['name']; // substitui pelo id da sessao
+
+            $stm->execute(
+                array('nome' => $_POST['nome'], 'tipo' => $_POST['tipo'],  'trailer' => $_POST['trailer'], 'descricao' => $_POST['descricao'], 'imagem' => $nomeArquivo)
+
+            );
+
+            move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio  . "\\" . $nomeArquivo);
+        }
+    }
 }

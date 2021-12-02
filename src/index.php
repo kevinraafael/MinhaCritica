@@ -5,6 +5,8 @@ include_once __DIR__ . '/controller/Login.php';
 include_once __DIR__ . '/controller/HomeController.php';
 include_once __DIR__ . '/controller/MovieController.php';
 include_once __DIR__ . '/models/Usuario.php';
+include_once __DIR__ . '/models/Midia.php';
+
 include_once __DIR__ . '/db/Database.php';
 
 
