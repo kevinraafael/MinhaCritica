@@ -60,9 +60,9 @@
             <div class="loginContainer">
                 <div class=mainTitle>Login</div>
                 <div class="input">
-                    <form method="POST">
-                        <input type="email" id="user" name="userInput" placeHolder="Usuário" />
-                        <input type="password" id="password" name=passorwdInput placeholder="Senha" />
+                    <form method="post">
+                        <input type="email" id="user" name="email" placeHolder="Usuário" />
+                        <input type="password" id="password" name="senha" placeholder="Senha" />
                         <div class="containerPassword">
                             <a id="forgivePassowrd">
                                 Esqueceu a senha ?

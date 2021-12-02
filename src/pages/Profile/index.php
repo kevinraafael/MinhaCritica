@@ -33,7 +33,10 @@
             <a> Livros </a>
           </li>
           <li>
-            <a> Login </a>
+            <form method="post">
+              <button type="imput"> Sair </button>
+            </form>
+            
           </li>
         </ul>
       </nav>

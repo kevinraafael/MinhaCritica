@@ -127,4 +127,5 @@ class Usuario
         $stm->bindValue(':email', $this->email);
         $stm->execute();
     }
+    
 }

@@ -39,10 +39,10 @@ class LoginController extends Controller
         var_dump($user);
         echo "entrei";
 
-        if (isset($user) && $user->igual($_POST['email'], $_POST['senha'])) {
+        if ($user && $user->igual($_POST['email'], $_POST['senha'])) {
            echo "entrei aqui";
             $_SESSION['user'] = $this->loggedUser = $user;
-            header('Location: /Profile/index');
+            header('Location: /profile');
         } else {
             echo "entrei no else";
             header('Location:login?email=' . $_POST['email'] . '&mensagem=Usuário e/ou senha incorreta!');
@@ -52,5 +52,19 @@ class LoginController extends Controller
     public function loginIndex(): void
     {
         $this->view('/pages/Login/index');
+    }
+
+    public function profileIndex(): void{
+        $this->view('/pages/Profile/index');
+    }
+
+    public function sair(): void
+    {
+        if (!$this->loggedUser) {
+            header('Location:login?email=' . $_POST['email'] . 'mensagem=Você precisa se identificar primeiro');
+            return;
+        }
+        unset($_SESSION['user']);
+        header('Location:login?email=' . $_POST['email'] . 'login?mensagem=Usuário deslogado com sucesso!');
     }
 }

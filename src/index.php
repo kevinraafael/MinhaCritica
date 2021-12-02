@@ -21,12 +21,14 @@ $movieController = new MovieController();
 // Add the first route
 Route::add('/cadastro', fn () => $loginController->registerIndex(), ['get']);
 Route::add('/login', fn () => $loginController->loginIndex(), ['get']);
+Route::add('/profile', fn () => $loginController->profileIndex(), ['get']);
 
 Route::add('/home', fn () => $homeController->homeIndex(), ['get']);
 Route::add('/addMovie', fn () => $movieController->addMovieIndex(), ['get']);
 
 Route::add('/cadastro', fn () => $loginController->register(), ['POST']);
-Route::add('/login', fn () => $loginController->login(), ['POST']);
+Route::add('/login', fn () => $loginController->login(), ['post']);
+Route::add('/logout', fn () => $loginController->sair(), ['post']);
 
 
 Route::run('/');
