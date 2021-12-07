@@ -22,6 +22,8 @@
                     <input type="text" id="search" name="searchBox" placeHolder="Pesquise aqui" />
 
                 </div>
+                <input type="checkbox" id="bt_menu" />
+                <label for="bt_menu">&#9776;</label>
                 <nav id="navigation">
                     <ul>
                         <li>
