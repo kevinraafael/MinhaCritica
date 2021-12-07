@@ -58,18 +58,23 @@
   padding: 0 40px 0 0;
   display: inline-block;
   cursor: pointer;
+  color: #fff;
+  text-decoration: none;
 }
 .capa_background {
-  background-color: #c4c4c4;
+  background-color: #d3d3d3;
   width: 425px;
   height: 493px;
   left: 46px;
   top: 234px;
+  margin-left: 10px;
 }
 
 .capa_background > p {
   text-align: center;
+  margin-top: 10%;
   padding-top: 50%;
+
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -160,19 +165,10 @@
 
 .divPrincipal {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.divTitulo {
-  margin-top: 23%;
-}
-.divTitulo > h1 {
-  font-family: Bebas Neue;
-  font-style: normal;
-  font-weight: normal;
-  color: #000000;
-  text-align: center;
-  font-size: 56px;
-  line-height: 67px;
-}
+
 .botao {
   width: 200px;
   height: 55px;
@@ -185,19 +181,19 @@
   line-height: 31px;
   margin-left: 26%;
 }
-.divSinopse > h1 {
-  font-family: Bebas Neue;
-  font-style: normal;
-  font-weight: normal;
-  color: #000000;
-  text-align: center;
-  margin-top: 10%;
-  font-size: 56px;
-  line-height: 67px;
-}
 
 #arrow {
   padding-left: 38%;
   color: #808080;
   font-size: 100px;
+}
+.formStyle {
+  display: flex;
+  justify-content: space-around;
+}
+.all {
+  margin: 10px;
+  padding-left: 10px;
+  width: 370px;
+  height: 30px;
 }
